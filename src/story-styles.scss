@@ -1,0 +1,50 @@
+$color-silver: #cccccc;
+$color-totem-pole: #990505;
+
+.storyjs {
+  &__wrapper {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  &__inner {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 220px;
+  }
+  &__scroller {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 250px;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__item {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
+    border: 1px solid rgba($color-silver, 0.5);
+    box-shadow: 0px 0px 4px 0px rgba($color-silver,.5);
+    border-radius: 200px;
+    margin: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    &[data-opened="false"] {
+      border-color: $color-totem-pole;
+      box-shadow: 0px 0px 0px 2px rgba($color-totem-pole,.7);
+    }
+  }
+  &__user-photo {
+    display: block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 100%;
+    margin: 1px;
+  }
+}

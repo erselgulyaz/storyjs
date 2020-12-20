@@ -7,10 +7,33 @@
   <title><%= htmlWebpackPlugin.options.title %></title>
   <link rel="stylesheet" href="./storyjs.css" />
   <script src="./storyjs.js"></script>
+  <style>
+    html,
+    head,
+    body {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
-
+  <div class="storyjs__wrapper">
+    <div class="storyjs__inner">
+      <div class="storyjs__scroller">
+        <div class="storyjs__item" data-opened="false">
+          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/horse.png" />
+        </div>
+        <div class="storyjs__item">
+          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/panda.png" />
+        </div>
+        <div class="storyjs__item">
+          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/penguen.png" />
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
