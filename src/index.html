@@ -1,52 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./storyjs.css" />
+    <script src="./storyjs.js"></script>
+    <style>
+      html,
+      head,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= htmlWebpackPlugin.options.title %></title>
-  <link rel="stylesheet" href="./storyjs.css" />
-  <script src="./storyjs.js"></script>
-  <style>
-    html,
-    head,
-    body {
-      height: 100%;
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="storyjs__wrapper">
-    <div class="storyjs__inner">
-      <div class="storyjs__scroller">
-        <div class="storyjs__item" data-opened="false">
-          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/horse.png" />
-        </div>
-        <div class="storyjs__item">
-          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/panda.png" />
-        </div>
-        <div class="storyjs__item">
-          <img class="storyjs__user-photo" src="http://projects.erselgulyaz.com/storyjs/penguen.png" />
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="storyjs__modal">
-    <div class="storyjs__modal__band"></div>
-    <div class="storyjs__modal__content">
-      <div class="storyjs__modal__closer"></div>
-      <div class="storyjs__modal__line"></div>
-      <div class="storyjs__modal__box">
-        <div class="storyjs__modal__box-inner"
-          style="background: url(http://projects.erselgulyaz.com/storyjs/modal-big.jpg) no-repeat center center; background-size: cover;">
-        </div>
-        <!-- <img class="storyjs__highlight__photo" src="http://projects.erselgulyaz.com/storyjs/modal-big.jpg" /> -->
-      </div>
-    </div>
-  </div>
-</body>
-
+  <body>
+    <div class="storyjs__wrapper" id="storyjs-selector"></div>
+  </body>
 </html>

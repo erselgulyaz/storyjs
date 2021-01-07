@@ -1,16 +1,16 @@
-const path = require('path');
+const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './index.js',
+  entry: "./index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'storyjs.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "storyjs.js",
   },
-  mode: 'development',
+  mode: "development",
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 9000,
     open: true,
@@ -21,33 +21,33 @@ module.exports = {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
           },
           {
             loader: "css-loader",
           },
           {
-            loader: "postcss-loader"
+            loader: "postcss-loader",
           },
           {
             loader: "sass-loader",
             options: {
-              implementation: require("sass")
-            }
-          }
-        ]
-      }
-    ]
+              implementation: require("sass"),
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -56,7 +56,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       inject: false,
-      title: "StoryJs Development"
-    })
-  ]
+      title: "StoryJs Development",
+    }),
+  ],
 };

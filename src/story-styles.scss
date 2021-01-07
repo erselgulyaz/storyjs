@@ -1,5 +1,5 @@
-$color-silver: #CCCCCC;
-$color-mercury: #E3E3E3;
+$color-silver: #cccccc;
+$color-mercury: #e3e3e3;
 $color-totem-pole: #990505;
 $color-mine-shaft: #212121;
 
@@ -30,7 +30,7 @@ $color-mine-shaft: #212121;
     min-width: 200px;
     height: 200px;
     border: 1px solid rgba($color-silver, 0.5);
-    box-shadow: 0px 0px 4px 0px rgba($color-silver,.5);
+    box-shadow: 0px 0px 4px 0px rgba($color-silver, 0.5);
     border-radius: 200px;
     margin: 10px;
     padding: 5px;
@@ -39,7 +39,7 @@ $color-mine-shaft: #212121;
     cursor: pointer;
     &[data-opened="false"] {
       border-color: $color-totem-pole;
-      box-shadow: 0px 0px 0px 2px rgba($color-totem-pole,.7);
+      box-shadow: 0px 0px 0px 2px rgba($color-totem-pole, 0.7);
     }
   }
   &__user-photo {
@@ -61,8 +61,15 @@ $color-mine-shaft: #212121;
     align-items: center;
     padding-top: 40px;
     box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
     @media screen and (min-width: 768px) {
       padding-top: 0;
+    }
+    &__opened & {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -96,7 +103,8 @@ $color-mine-shaft: #212121;
     width: 33px;
     height: 33px;
     cursor: pointer;
-    &:before, &:after {
+    &:before,
+    &:after {
       content: "";
       display: block;
       position: absolute;
