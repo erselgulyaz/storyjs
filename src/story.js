@@ -119,30 +119,35 @@ class storyjs {
   }
 
   party(time, idSelector) {
-    document.querySelector(`.${this.modalLineInnerEl}`).style.width = "100%";
     document.querySelector(
       `.${this.modalLineInnerEl}`
     ).style.transition = `all ${time}s ease-in`;
-    setTimeout(() => {
-      document.querySelector(`.${this.modalLineInnerEl}`).style = "";
-    }, `${time}000`);
+    document.querySelector(`.${this.modalLineInnerEl}`).style.width = "100%";
     setTimeout(() => {
       const filteredItems = this.items.filter(
         (x) => x.id === parseInt(idSelector) + 1
       );
-      if (filteredItems.length > 0) {
-        document.querySelector(
-          `.${this.modalBoxInnerEl}`
-        ).style.background = `url(${filteredItems[0].modalPic}) no-repeat center center`;
-        document.querySelector(
-          `.${this.modalBoxInnerEl}`
-        ).style.backgroundSize = "cover";
+      if (
+        filteredItems.length > 0 &&
+        document.body.classList.add("storyjs__modal__opened")
+      ) {
+        return new Promise(function (resolve, reject) {
+          document.querySelector(`.storyjs__modal-line__inner`).style = "";
+          setTimeout(resolve, 100);
+        }).then(() => {
+          document.querySelector(
+            `.${this.modalBoxInnerEl}`
+          ).style.background = `url(${filteredItems[0].modalPic}) no-repeat center center`;
+          document.querySelector(
+            `.${this.modalBoxInnerEl}`
+          ).style.backgroundSize = "cover";
 
-        this.party(filteredItems[0].time, filteredItems[0].id);
+          this.party(filteredItems[0].time, filteredItems[0].id);
+        });
       } else {
         this.closeActions();
       }
-    }, `${time}005`);
+    }, `${time}000`);
   }
 
   handleModalClose() {
