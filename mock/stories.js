@@ -1,17 +1,23 @@
 export default [
   {
     id: 1,
-    path: "http://projects.erselgulyaz.com/storyjs/horse.png",
+    profilePic: "http://projects.erselgulyaz.com/storyjs/horse.png",
+    modalPic: "http://projects.erselgulyaz.com/storyjs/horse.png",
     title: "Sample Item",
+    time: 10,
   },
   {
     id: 2,
-    path: "http://projects.erselgulyaz.com/storyjs/panda.png",
+    profilePic: "http://projects.erselgulyaz.com/storyjs/panda.png",
+    modalPic: "http://projects.erselgulyaz.com/storyjs/panda.png",
     title: "Sample Item",
+    time: 3,
   },
   {
     id: 3,
-    path: "http://projects.erselgulyaz.com/storyjs/penguen.png",
+    profilePic: "http://projects.erselgulyaz.com/storyjs/penguen.png",
+    modalPic: "http://projects.erselgulyaz.com/storyjs/penguen.png",
     title: "Sample Item",
+    time: 7,
   },
 ];

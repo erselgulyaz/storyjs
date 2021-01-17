@@ -1,5 +1,6 @@
 $color-silver: #cccccc;
 $color-mercury: #e3e3e3;
+$color-gallery: #f0f0f0;
 $color-totem-pole: #990505;
 $color-mine-shaft: #212121;
 
@@ -72,8 +73,7 @@ $color-mine-shaft: #212121;
       visibility: visible;
     }
   }
-
-  &__modal__band {
+  &__modal-band {
     position: fixed;
     left: 0;
     top: 0;
@@ -82,8 +82,7 @@ $color-mine-shaft: #212121;
     background-color: rgba($color-mine-shaft, 0.4);
     z-index: 1;
   }
-
-  &__modal__content {
+  &__modal-content {
     position: relative;
     width: 100%;
     max-width: calc(100% - 32px);
@@ -95,8 +94,7 @@ $color-mine-shaft: #212121;
       height: 480px;
     }
   }
-
-  &__modal__closer {
+  &__modal-closer {
     position: absolute;
     right: 0;
     top: -40px;
@@ -123,34 +121,42 @@ $color-mine-shaft: #212121;
       transform: rotate(45deg);
     }
   }
-
-  &__modal__line {
+  &__modal-line {
     display: flex;
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: $color-mercury;
+    background-color: $color-silver;
     display: block;
     margin-bottom: 8px;
+    position: relative;
   }
-
-  &__modal__box {
+  &__modal-line__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: $color-gallery;
+    display: block;
+    /* transition: all 10s ease-in-out; */
+  }
+  &__modal-box {
     display: flex;
     width: 100%;
     height: calc(100% - 12px);
     border-radius: 8px;
     position: relative;
+    backface-visibility: hidden;
   }
-
-  &__modal__box-inner {
+  &__modal-box__inner {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
   }
-
-  &__highlight__photo {
+  &__highlight-photo {
     left: 50%;
     max-height: 100%;
     max-width: 100%;
