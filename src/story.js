@@ -129,7 +129,7 @@ class storyjs {
       );
       if (
         filteredItems.length > 0 &&
-        document.body.classList.add("storyjs__modal__opened")
+        document.body.classList.contains("storyjs__modal__opened")
       ) {
         return new Promise(function (resolve, reject) {
           document.querySelector(`.storyjs__modal-line__inner`).style = "";
