@@ -1,6 +1,8 @@
 class storyjs {
   constructor(options = {}) {
     this.output = "";
+    this.interval = null;
+
     this.innerEl = "storyjs__inner";
     this.scrollerEl = "storyjs__scroller";
     this.storyItemEl = "storyjs__item";
@@ -123,7 +125,7 @@ class storyjs {
       `.${this.modalLineInnerEl}`
     ).style.transition = `all ${time}s ease-in`;
     document.querySelector(`.${this.modalLineInnerEl}`).style.width = "100%";
-    setTimeout(() => {
+    this.interval = setInterval(() => {
       const filteredItems = this.items.filter(
         (x) => x.id === parseInt(idSelector) + 1
       );
@@ -172,6 +174,7 @@ class storyjs {
     document
       .querySelector(`.${this.modalLineInnerEl}`)
       .removeAttribute("style");
+    clearInterval(this.interval);
   }
 }
 
