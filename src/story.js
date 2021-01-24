@@ -144,6 +144,7 @@ class storyjs {
             `.${this.modalBoxInnerEl}`
           ).style.backgroundSize = "cover";
 
+          clearInterval(this.interval);
           this.party(filteredItems[0].time, filteredItems[0].id);
         });
       } else {
@@ -178,4 +179,4 @@ class storyjs {
   }
 }
 
-export default storyjs;
+module.exports = storyjs;

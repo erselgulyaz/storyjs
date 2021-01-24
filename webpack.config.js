@@ -3,10 +3,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./index.js",
+  entry: {
+    story: "./src/story.js",
+    sample: "./src/sample.js",
+    styles: "./src/story-styles.scss",
+  },
   output: {
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    filename: "storyjs.js",
   },
   mode: "development",
   devServer: {
@@ -51,7 +55,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "storyjs.css",
+      filename: "storyjs-[name].css",
     }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
