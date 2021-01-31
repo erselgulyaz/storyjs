@@ -141,6 +141,54 @@ $color-mine-shaft: #212121;
     display: block;
     /* transition: all 10s ease-in-out; */
   }
+  &__modal-arrow {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 40px);
+    width: 40px;
+    height: 80px;
+    background-color: rgba($color-mine-shaft, 0.25);
+    z-index: 1;
+    &:before,
+    &:after {
+      content: "";
+      width: 2px;
+      height: 20px;
+      background-color: white;
+      display: block;
+      position: absolute;
+      top: 22px;
+    }
+  }
+  &__modal-arrow__prev {
+    left: 0;
+    &:before,
+    &:after {
+      left: 15px;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+      top: 36px;
+    }
+  }
+  &__modal-arrow__next {
+    right: 0;
+    &:before,
+    &:after {
+      right: 15px;
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+      top: 34px;
+    }
+  }
   &__modal-box {
     display: flex;
     width: 100%;
