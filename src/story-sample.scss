@@ -1,0 +1,101 @@
+html,
+head,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 40px 0;
+  background-color: #efefef;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 16px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+#logo {
+  justify-content: center;
+  padding: 24px 0;
+  font: 600 64px/72px "Open Sans";
+}
+
+#action {
+  padding: 24px 0;
+  border-top: 1px solid rgba(33, 33, 33, 0.05);
+  border-bottom: 1px solid rgba(33, 33, 33, 0.05);
+}
+
+.section {
+  &__title {
+    font: 600 24px/32px "Open Sans";
+    padding: 0 0 16px;
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+  &__desc {
+    font: 16px/24px "Open Sans";
+    margin: 0;
+    padding: 0;
+  }
+  &__code {
+    background-color: #dedede;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    margin: 8px 0 16px;
+    code {
+      font-family: "Open Sans";
+    }
+  }
+  &__table {
+    width: 100%;
+    min-width: 600px;
+    th,
+    td {
+      text-align: left;
+      color: #212121;
+      font-family: "Open Sans";
+    }
+    th {
+      font-weight: 600;
+      padding-bottom: 8px;
+    }
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: #dedede;
+        }
+      }
+      td {
+        padding: 10px 5px;
+      }
+    }
+  }
+  &__table-wrapper {
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: smooth;
+  }
+  &__copyright {
+    text-align: center;
+    padding: 40px 0;
+  }
+}

@@ -1,7 +1,36 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>StoryJs Development</title><link rel="stylesheet" href="./storyjs-styles.css"/><script src="./sample.js"></script><style>html,
-      head,
-      body {
-        height: 100%;
-        padding: 0;
-        margin: 0;
-      }</style></head><body><div class="storyjs__wrapper" id="storyjs-selector"></div></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="Storyjs is a javascript library similar to the story areas we often use in our social media applications."/><meta name="keywords" content="Javascript story plugin, purejs story, website story plugin"/><meta name="author" content="Ersel Gülyaz"/><meta name="classification" content="Social Media Style Js Plugin"/><meta name="revisit-after" content="1 days"/><title>StoryJs Development</title><link rel="preconnect" href="https://fonts.gstatic.com"/><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/><link rel="stylesheet" href="./storyjs-styles.css"/><link rel="stylesheet" href="./storyjs-styles-sample.css"/><script src="./sample.js"></script></head><body><div class="container"><section id="logo">STORYJS</section><section id="action"><div class="storyjs__wrapper" id="storyjs-selector"></div></section><section id="section"><h2 class="section__title">DESCRIPTION</h2><p class="section__desc">Storyjs is a javascript library similar to the story areas we often use in our social media applications. If you want to create and manage storyboard for your website, you only need to add the storyjs between the project files. Afterwards, you can arrange its appearance according to your wishes.</p></section><section id="section"><h2 class="section__title">INSTALLATION & USAGE</h2><p class="section__desc">Install with terminal</p><pre class="section__code">
+          <code>
+            npm install storyjs
+          </code>
+        </pre><p class="section__desc">Import js file</p><pre class="section__code">
+          <code>
+            import storyjs from "storyjs";
+          </code>
+        </pre><p class="section__desc">Init</p><pre class="section__code">
+          <code>
+            const items = [
+              {
+                id: 1,
+                profilePic: "http://projects.erselgulyaz.com/storyjs/horse.png",
+                modalPic: "http://projects.erselgulyaz.com/storyjs/horse.png",
+                title: "Sample Item",
+                time: 10,
+              },
+              {
+                id: 2,
+                profilePic: "http://projects.erselgulyaz.com/storyjs/panda.png",
+                modalPic: "http://projects.erselgulyaz.com/storyjs/panda.png",
+                title: "Sample Item",
+                time: 3,
+              }
+            ]
+            <br/>
+            const sample = new storyjs({
+              <br/>
+              &nbsp;&nbsp;items,
+              <br/>
+              &nbsp;&nbsp;selector: "#storyjs-selector"
+              <br/>
+            });
+          </code>
+        </pre></section><section id="section"><h2 class="section__title">PARAMETERS</h2><div class="section__table-wrapper"><table class="section__table"><thead><tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td>items</td><td>Array</td><td>null</td><td>Array should come as shown above. ID values must be in order. The inside of each Object must be prepared with the same variables.</td></tr><tr><td>selector</td><td>String</td><td>#storyjs-selector</td><td>The container to be selected for the creation of Storyjs must be written on the page.</td></tr></tbody></table></div></section><section id="section" class="section__copyright">&copy Ersel Gülyaz</section></div></body></html>

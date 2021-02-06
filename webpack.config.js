@@ -7,6 +7,7 @@ module.exports = {
     story: "./src/story.js",
     sample: "./src/sample.js",
     styles: "./src/story-styles.scss",
+    "styles-sample": "./src/story-sample.scss",
   },
   output: {
     filename: "[name].js",
