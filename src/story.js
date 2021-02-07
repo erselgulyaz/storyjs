@@ -31,7 +31,9 @@ class storyjs {
         this[key] = extend[key];
       }
     }
-    this.init();
+    if (document.querySelector(this.selector)) {
+      this.init();
+    }
   }
 
   init() {

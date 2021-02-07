@@ -1,4 +1,3 @@
-import "./src/story-styles.scss";
+const storyjs = require("./src/story");
 
-import "./src/story";
-import "./src/sample";
+module.exports = storyjs;

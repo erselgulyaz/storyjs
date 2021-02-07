@@ -1,12 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
     story: "./src/story.js",
-    sample: "./src/sample.js",
+    "story.min": "./src/story.js",
     styles: "./src/story-styles.scss",
+    sample: "./src/sample.js",
     "styles-sample": "./src/story-sample.scss",
   },
   output: {
@@ -52,6 +54,14 @@ module.exports = {
           },
         ],
       },
+    ],
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new UglifyJsPlugin({
+        include: /\.min\.js$/,
+      }),
     ],
   },
   plugins: [
