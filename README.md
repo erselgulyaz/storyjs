@@ -90,12 +90,6 @@ const sample = new storyjs({
       </td>
     </tr>
     <tr>
-      <td>Name</td>
-      <td>Type</td>
-      <td>Default</td>
-      <td>Description</td>
-    </tr>
-    <tr>
       <td>
       <strong>selector</strong>
       </td>
